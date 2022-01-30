@@ -34,10 +34,10 @@
                     @endauth
                 </div>
             @endif
-
+buraya deneme yazdım
 
             <h1>Slm
-            <strong>SLM</strong>
+            <strong>Değişti</strong>
             </h1>
 
         </div>

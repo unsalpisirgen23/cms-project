@@ -1,3 +1,0 @@
-<?php
-$gdbd = 'test';
-$aaa='';

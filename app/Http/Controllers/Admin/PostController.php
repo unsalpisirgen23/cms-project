@@ -31,7 +31,8 @@ class PostController extends Controller
 
     public function store(Request $request){
 
-        $posts = $request->validated();
+    /*,
+     * $posts = $request->validated();
         $posts["author_id"] = \auth()->id();
         $posts["updated_at"] = date('Y-m-d H:i:s');
         $insert =  DB::table("posts")->insert($posts);
@@ -40,6 +41,7 @@ class PostController extends Controller
             echo $last.' başarıyla kaydedildi';
             //return redirect()->route("admin.posts.show", LastInsert::get_id())->with('success', "Tebrikler içerik başarıyla eklendi.");
         }
+     */
     }
 
 

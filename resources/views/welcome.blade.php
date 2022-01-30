@@ -16,6 +16,7 @@
         <style>
             body {
                background-color: #2d3748;
+                color: #fff;
             }
         </style>
     </head>
@@ -34,11 +35,6 @@
                     @endauth
                 </div>
             @endif
-buraya deneme yazdım
-yeniden
-            <h1>Slm
-            <strong>Değişti</strong>
-            </h1>
 
         </div>
     </body>

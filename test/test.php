@@ -1,3 +1,5 @@
 <?php
 $gdbd = 'test';
-$aaa='';
+$aaa='aa';
+//buraya yorum attım
+$test ='aca';

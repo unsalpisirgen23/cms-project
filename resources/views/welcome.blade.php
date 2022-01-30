@@ -35,7 +35,7 @@
                 </div>
             @endif
 buraya deneme yazdım
-
+yeniden
             <h1>Slm
             <strong>Değişti</strong>
             </h1>

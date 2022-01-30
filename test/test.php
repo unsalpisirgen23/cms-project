@@ -1,2 +1,3 @@
 <?php
 $gdbd = 'test';
+$aaa='';

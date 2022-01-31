@@ -70,7 +70,7 @@
                         <p>
                            Kategoriler
                             <i class="fas fa-angle-left right"></i>
-                            <span class="badge badge-info right">{{ $categories->count() }}</span>
+                            <span class="badge badge-info right">{!!  isset($categories) ? $categories->count()  : '0'!!}</span>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">

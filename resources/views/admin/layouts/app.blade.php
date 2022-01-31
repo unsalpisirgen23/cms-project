@@ -9,7 +9,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset('asset/admin/plugins/fontawesome-free/css/all.min.css')}}">
     <!-- Ionicons -->
-    <link rel="stylesheet" href="{{asset('asset/admin/https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')}}">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Tempusdominus Bootstrap 4 -->
     <link rel="stylesheet" href="{{asset('asset/admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
     <!-- iCheck -->
@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="{{asset('asset/admin/plugins/daterangepicker/daterangepicker.css')}}">
     <!-- summernote -->
     <link rel="stylesheet" href="{{asset('asset/admin/plugins/summernote/summernote-bs4.min.css')}}">
+    @yield("style")
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -44,8 +46,12 @@
     <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
+
+
 <!-- jQuery -->
 <script src="{{asset("asset/admin/plugins/jquery/jquery.min.js")}}"></script>
+@yield("script")
+
 <!-- jQuery UI 1.11.4 -->
 <script src="{{asset("asset/admin/plugins/jquery-ui/jquery-ui.min.js")}}"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -54,8 +60,7 @@
 </script>
 <!-- Bootstrap 4 -->
 <script src="{{asset("asset/admin/plugins/bootstrap/js/bootstrap.bundle.min.js")}}"></script>
-<!-- ChartJS -->
-<script src="{{asset("asset/admin/plugins/chart.js/Chart.min.js")}}"></script>
+
 <!-- Sparkline -->
 <script src="{{asset("asset/admin/plugins/sparklines/sparkline.js")}}"></script>
 <!-- JQVMap -->
@@ -78,5 +83,6 @@
 <script src="{{asset("asset/admin/dist/js/demo.js")}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{asset("asset/admin/dist/js/pages/dashboard.js")}}"></script>
+
 </body>
 </html>

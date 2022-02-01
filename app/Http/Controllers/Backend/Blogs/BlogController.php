@@ -15,6 +15,7 @@ use Intervention\Image\Facades\Image;
 class BlogController extends Controller
 {
     // this comment line
+    //line two
     public function getBlogs()
     {
         $blogs = Blogs::orderBy('id','desc')->get();

@@ -4,11 +4,13 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\CategoryRequest;
+use App\Repositories\UnitOfWork;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class CategoryController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -16,10 +18,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = DB::table('categories')->get();
-
+        $categories = $this->unitOfWork->categoryRepository()->getAll();
         return view('admin.categories.index',['categories'=>$categories]);
-
     }
 
     /**
@@ -42,15 +42,10 @@ class CategoryController extends Controller
     public function store(CategoryRequest $request)
     {
        $request->validated();
-       // print_r($request->postCategory());
-        $request['created_at'] =new \DateTime();
-        $request['updated_at'] =new \DateTime();
-
-        $insert = DB::table("categories")->insert($request->postCategory());
+        $insert = $this->unitOfWork->categoryRepository()->add($request->postCategory());
         if ($insert)
-            $id= DB::getPdo()->lastInsertId();
-            return redirect()->route("admin.categories.edit",$id);
-
+            $id= $this->unitOfWork->categoryRepository()->lastInsertId();
+            return redirect()->route("admin.categories.show",$id);
     }
 
     /**

@@ -7,6 +7,7 @@ use App\Http\Requests\BaseRequest;
 
 class CategoryRequest extends BaseRequest
 {
+
     protected $category;
 
     public function authorize()
